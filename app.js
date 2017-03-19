@@ -62,5 +62,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.get('/hello', function (req, res) {
+   res.send('Hello World');
+})
+
 
 module.exports = app;

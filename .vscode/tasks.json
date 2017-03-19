@@ -8,7 +8,7 @@
     "suppressTaskName": true,
     "tasks": [
          {
-            "taskName": "start",
+            "taskName": "build",
             "args": ["${fileDirname}/${fileBasenameNoExtension}"],
             "isBuildCommand": true
         },
