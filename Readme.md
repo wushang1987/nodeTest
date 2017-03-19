@@ -1,5 +1,8 @@
 # nodejs 练习项目
 
+开发环境
+vscode
+
 学习nodejs的练习项目
 nodeStudy 目录下是原生nodejs练习
 使用expreess
