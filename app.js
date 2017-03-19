@@ -12,7 +12,7 @@ var testController=require('./modules/testController');
 //test5
 var app = express();
 
-// view engine setup
+// 视图引擎设置
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
