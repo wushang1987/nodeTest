@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "mongoose": "^4.4.12",
+    "mongoskin": "^2.1.0",
     "multer": "^1.1.0"
   }
 }

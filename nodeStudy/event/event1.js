@@ -1,5 +1,6 @@
 //event.js 文件
 var EventEmitter = require('events').EventEmitter; 
+var Hello = require('../hello')
 var event = new EventEmitter(); 
 event.on('some_event', function() { 
 	console.log('some_event 事件触发'); 
@@ -7,3 +8,8 @@ event.on('some_event', function() {
 setTimeout(function() { 
 	event.emit('some_event'); 
 }, 2000); 
+
+var helloMan = new Hello();
+helloMan.setName("dd");
+helloMan.sayHello();
+
