@@ -23,9 +23,9 @@ kittySchema.methods.speak = function () {
     : "I don't have a name"
   console.log(greeting);
 }
-var Kitten = mongoose.model('Kitten', kittySchema)
+var Kitten = mongoose.model('Kitten2', kittySchema)
 var fluffy = new Kitten({ name: 'fluffy' });
-fluffy.speak() // "Meow name is fluffy"
+// fluffy.speak() // "Meow name is fluffy"
 
 //增加一条信息
 fluffy.save(function (err, fluffy) {
@@ -35,5 +35,5 @@ fluffy.save(function (err, fluffy) {
 
 //查询操作
 Kitten.find(function(err,resutl){
-    console.log(resutl)
+  //  console.log(resutl)
 })
