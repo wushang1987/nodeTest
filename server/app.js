@@ -13,8 +13,8 @@ var testController=require('./modules/testController');
 var app = express();
 
 // 视图引擎设置
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 
 //静态资源文件托管
-app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname, '../views')));
 // app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', routes);
