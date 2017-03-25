@@ -9,6 +9,20 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var testController=require('./modules/testController');
 
+var mongoose = require('mongoose');
+var dbConfig = require('./config/db');
+mongoose.connect(dbConfig.mongo.uri);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+    console.log(callback);
+  // yay!
+});
+
+
+
+
 //test5
 var app = express();
 
