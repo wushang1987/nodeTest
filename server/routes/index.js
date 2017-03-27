@@ -8,7 +8,11 @@ router.get('/', function(req, res, next) {
   // res.render('index', { title: 'Express 学习网' });
   res.sendfile('views/index.html');
 });
-router.get('/thing', thing);
+router.get('/thing', thing.find);
+router.post('/thing',thing.save);
+router.post('/removething',thing.remove);
+router.post('/removeOneThing',thing.removeOne);
+router.post('/updatething',thing.updata);
 
 /**
  * 路由模块
