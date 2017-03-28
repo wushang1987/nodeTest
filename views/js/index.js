@@ -1,35 +1,59 @@
 var app = angular.module('myApp', ['ui.router']);
 
-app.config(function ($stateProvider) {
-	var helloState = {
-		name: 'hello',
-		url: '/hello',
+app.config(function ($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise('/');
+	$stateProvider.state({
+		name: "content",
+		url: '/',
+		// templateUrl: '/view/show.html'
+		views: {
+			"": { templateUrl: '/view/content.html' },
+			"header@content": { templateUrl: '/view/head.html' },
+			"body@content": { templateUrl: '/view/show.html' },
+		}
+	}).state({
+		name: 'content.hello',
+		url: 'hello',
+		views: {
+			"body@content": { templateUrl: '/view/show.html' },
+		}
 		// controller:"myCtrl",
-		templateUrl: '/view/show.html'
-	}
-
-	var aboutState = {
-		name: 'setting',
-		url: '/setting',
-		templateUrl: '/view/config.html'
-	}
-
-	var login = {
-		name: 'login',
-		url: '/login',
-		templateUrl: '/view/login.html'
-	}
-
-	var regist = {
-		name: 'regist',
-		url: '/regist',
-		templateUrl: '/view/regist.html'
-	}
-
-	$stateProvider.state(helloState);
-	$stateProvider.state(aboutState);
-	$stateProvider.state(login);
-	$stateProvider.state(regist);
+	})
+		.state({
+			name: 'content.setting',
+			url: 'setting',
+			views: {
+				"body@content": { templateUrl: '/view/config.html' },
+			}
+		})
+		.state({
+			name: 'content.login',
+			url: 'login',
+			views: {
+				"body@content": { templateUrl: '/view/login.html' },
+			}
+		})
+		.state({
+			name: 'content.regist',
+			url: 'regist',
+			views: {
+				"body@content": { templateUrl: '/view/regist.html' },
+			}
+		})
+		.state({
+			name: 'content.setting.list',
+			url: '/list',
+			views: {
+				"ad": { templateUrl: '/view/list.html' },
+			}
+		})
+		.state({
+			name: 'content.setting.new',
+			url: '/new',
+			views: {
+				"ad": { templateUrl: '/view/new.html' },
+			}
+		})
 });
 
 

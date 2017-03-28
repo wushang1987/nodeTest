@@ -1,21 +1,18 @@
+<div class="container">
 
-<div class="panel panel-default">
-    <div class="panel-body">
-     <div ng-controller="myForm">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
-            <form role="form">
-                <legend>Form title</legend>
-
-                <div class="form-group">
-                    <label for="">label</label>
-                    <input type="text" ng-model="name" class="form-control" id="" placeholder="Input field">
-                </div>
-
-
-
-                <button ng-click="ddsubmit()" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+        <ul class="list-group">
+            <li  ui-sref='content.setting.list' class="list-group-item">文章列表</li>
+            <li  ui-sref='content.setting.new' class="list-group-item">新增文章</li>
+        </ul>
 
     </div>
+
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+
+        <div  ui-view='ad'></div>
+    </div>
+
+
 </div>
