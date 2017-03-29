@@ -5,4 +5,4 @@ services:
   - mongodb
 
 script:
-    - ember test --server
+    - npm start
