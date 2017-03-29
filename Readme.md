@@ -1,5 +1,7 @@
 # nodejs 练习项目
 
+[![Build Status](https://travis-ci.org/wushang1987/nodeTest.svg?branch=master)](https://travis-ci.org/wushang1987/nodeTest)
+
 采用 travis-ci 构建
 开发环境:vscode
 
