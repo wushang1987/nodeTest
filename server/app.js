@@ -11,6 +11,8 @@ var testController=require('./modules/testController');
 
 var mongoose = require('mongoose');
 var dbConfig = require('./config/db');
+
+
 mongoose.connect(dbConfig.mongo.uri);
 
 var db = mongoose.connection;
