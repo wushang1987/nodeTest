@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var testController=require('./modules/testController');
+var testController = require('./modules/testController');
 
 var mongoose = require('mongoose');
 var dbConfig = require('./config/db');
@@ -17,9 +17,9 @@ mongoose.connect(dbConfig.mongo.uri);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function (callback) {
+db.once('open', function(callback) {
     console.log(callback);
-  // yay!
+    // yay!
 });
 
 
@@ -29,7 +29,7 @@ db.once('open', function (callback) {
 var app = express();
 
 // 视图引擎设置
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'client'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
@@ -41,19 +41,19 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 
 //静态资源文件托管
-app.use(express.static(path.join(__dirname, '../views')));
+app.use(express.static(path.join(__dirname, '../client')));
 // app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', routes);
 app.use('/users', users);
 
-app.post('/dataInpute',testController.dataInput);
+app.post('/dataInpute', testController.dataInput);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handlers
@@ -80,8 +80,8 @@ app.use(function(req, res, next) {
 //   });
 // });
 
-app.get('/hello', function (req, res) {
-   res.send('Hello World');
+app.get('/hello', function(req, res) {
+    res.send('Hello World');
 })
 
 

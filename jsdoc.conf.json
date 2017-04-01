@@ -4,7 +4,7 @@
         "dictionaries": ["jsdoc", "closure"]
     },
     "source": {
-        "include": ["views/js"],
+        "include": ["client/js", "server/api"],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"
     },
