@@ -1,12 +1,19 @@
 import _ from 'lodash';
+import router from './js/router';
+import myCtrl from './js/myCtrl';
+import angular from 'angular';
+import uirouter from 'angular-ui-router';
+import login from './js/login';
+import regist from './js/regist';
+import myForm from './js/myForm';
 
-function component () {
-  var element = document.createElement('div');
+var app = angular.module('myApp', [uirouter]);
 
-  /* lodash is required for the next line to work */
-  element.innerHTML = _.join(['Hell1111o','webpack'], ' ');
 
-  return element;
-}
 
-document.body.appendChild(component());
+
+app.config(router);
+app.controller('myCtrl', myCtrl);
+app.controller('login', login);
+app.controller('regist', regist);
+app.controller('myForm', myForm);
