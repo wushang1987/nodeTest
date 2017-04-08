@@ -1,4 +1,4 @@
-var controller = function($scope, $http) {
+var controller = function($scope, $http, $state) {
     $scope.firstName = "John";
     $scope.lastName = "Doe";
     $http({
@@ -11,6 +11,10 @@ var controller = function($scope, $http) {
     }, function errorCallback(response) {
         // 请求失败执行代码
     });
+
+    $scope.search = function() {
+        $state.go('content.search')
+    }
 }
 
 

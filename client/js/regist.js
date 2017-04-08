@@ -15,3 +15,4 @@ var regist = function($scope, $http) {
 
 }
 export default regist;
+

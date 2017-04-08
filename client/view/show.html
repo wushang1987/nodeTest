@@ -1,11 +1,14 @@
-
-<div class="panel panel-default">
-    <div class="panel-body">
-       基础显示
-        <ul>
-            <li ng-repeat="x in dab">
-                {{x.name}}
-            </li>
-        </ul>
+<div class="container">
+    <div class="list-group" ng-repeat="x in dab">
+        <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading"> {{x.name}}</h4>
+            <p class="list-group-item-text">Content goes here</p>
+        </a>
+    </div>
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading"> 欢迎来到node press 的世界</h4>
+            <p class="list-group-item-text">新增一篇文章</p>
+        </a>
     </div>
 </div>

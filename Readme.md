@@ -6,6 +6,8 @@
 
 采用 CodeClimate 做代码质量管控
 
+项目启动 npm run start3
+
 
 创建dev分支，master分支为持续集成分支
 

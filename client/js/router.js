@@ -7,7 +7,6 @@ export default function routes($stateProvider, $urlRouterProvider) {
             name: "content",
             url: '/',
             controller: 'myCtrl',
-            // templateUrl: '/view/show.html'
             views: {
                 "": { templateUrl: '/view/content.html' },
                 "header@content": { templateUrl: '/view/head.html' },
@@ -54,6 +53,13 @@ export default function routes($stateProvider, $urlRouterProvider) {
             url: '/new',
             views: {
                 "ad": { templateUrl: '/view/new.html' },
+            }
+        })
+        .state({
+            name: 'content.search',
+            url: 'search',
+            views: {
+                "body@content": { templateUrl: '/view/search.html' },
             }
         })
 }
