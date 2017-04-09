@@ -5,4 +5,4 @@ services:
   - mongodb
 
 script:
-    - npm run start2
+    - npm run start3
