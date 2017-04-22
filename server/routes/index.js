@@ -7,7 +7,7 @@ var user = require("../api/user/user");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // res.render('index', { title: 'Express 学习网' });
-  res.sendfile('views/index.html');
+  res.sendfile('/client/index.html');
 });
 router.get('/thing', thing.find);
 router.post('/thing',thing.save);

@@ -3,8 +3,9 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "npm run start2 && npm run start1",
-        "start1": "node server/bin/www",
+        "start": "node server/bin/www",
+        "start4": "nodemon nodetest",
+        "start1": "npm run start2 && npm run start1",
         "start2": "webpack --config webpack.config.js",
         "start3": "webpack-dev-server"
     },

@@ -1,0 +1,38 @@
+<div class="container" ng-controller="regist">
+
+    <form>
+        <legend>注册</legend>
+
+        <div class="form-group">
+            <label for="">用户名:</label>
+            <input ng-model="name" type="email" name="" id="input1/(\w+)/\u\1/g" class="form-control" value="" title="">
+        </div>
+        <div class="form-group">
+            <label for="">密码:</label>
+            <input ng-model="password" type="password" class="form-control" id="" placeholder="Input field">
+        </div>
+        <div class="form-group">
+            <label for="">确认密码:</label>
+            <input ng-model="confirm" type="password" class="form-control" id="" placeholder="Input field">
+        </div>
+        <button ng-click="registSubmit()" class="btn btn-primary">注册</button>
+    </form>
+</div>
+
+
+<div class="modal fade" id="modal-id">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                密码应与确认密码相同
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

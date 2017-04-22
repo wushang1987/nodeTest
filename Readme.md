@@ -2,11 +2,19 @@
 
 [![Build Status](https://travis-ci.org/wushang1987/nodeTest.svg?branch=master)](https://travis-ci.org/wushang1987/nodeTest)
 
+
 采用 travis-ci 做持续集成构建
 
 采用 CodeClimate 做代码质量管控
 
-项目启动 npm run start3
+纯前台项目启动 
+
+```javascript
+npm run start3
+
+```
+
+
 
 
 创建dev分支，master分支为持续集成分支

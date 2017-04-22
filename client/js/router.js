@@ -28,20 +28,6 @@ export default function routes($stateProvider, $urlRouterProvider) {
             }
         })
         .state({
-            name: 'content.login',
-            url: 'login',
-            views: {
-                "body@content": { templateUrl: '/view/login.html' },
-            }
-        })
-        .state({
-            name: 'content.regist',
-            url: 'regist',
-            views: {
-                "body@content": { templateUrl: '/view/regist.html' },
-            }
-        })
-        .state({
             name: 'content.setting.list',
             url: '/list',
             views: {
@@ -52,7 +38,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
             name: 'content.setting.new',
             url: '/new',
             views: {
-                "ad": { templateUrl: '/view/new.html' },
+                "ad": { templateUrl: '/admin/new/new.html' },
             }
         })
         .state({
