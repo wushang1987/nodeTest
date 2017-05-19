@@ -14,6 +14,7 @@ module.exports = {
             { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' }
         ]
     },
+    devtool :"source-map",
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname + '\\client\\dist')

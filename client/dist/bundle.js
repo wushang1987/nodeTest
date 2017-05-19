@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -72,17 +72,18 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_router__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_router__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_account__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_myCtrl__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_myCtrl__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_ui_router__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_ui_router__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_ui_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular_ui_router__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__account_login_login__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__account_regist_regist__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__admin_new_myForm__ = __webpack_require__(4);
 
 
 
@@ -91,7 +92,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-// import myForm from './js/myForm';
+
 // import ace from '../node_modules/angular-ui-ace/src/ui-ace';
 // console.log(ace);
 
@@ -102,7 +103,7 @@ app.config(__WEBPACK_IMPORTED_MODULE_2__account_account__["a" /* default */]);
 app.controller('myCtrl', __WEBPACK_IMPORTED_MODULE_3__js_myCtrl__["a" /* default */]);
 app.controller('login', __WEBPACK_IMPORTED_MODULE_6__account_login_login__["a" /* default */]);
 app.controller('regist', __WEBPACK_IMPORTED_MODULE_7__account_regist_regist__["a" /* default */]);
-app.controller('myForm', myForm);
+app.controller('myForm', __WEBPACK_IMPORTED_MODULE_8__admin_new_myForm__["a" /* default */]);
 
 /***/ }),
 /* 1 */
@@ -192,6 +193,30 @@ var regist = function ($scope, $http) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+var myForm = function($scope, $http) {
+    $scope.ddsubmit = function() {
+        $http({
+            method: 'POST',
+            data: { name: $scope.name, url: 'ddddd' },
+            url: '/thing'
+        }).then(function successCallback(response) {
+            // 请求成功执行代码
+            console.log(response.data);
+            //$scope.dab = response.data;
+        }, function errorCallback(response) {
+            // 请求失败执行代码
+        });
+    }
+
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (myForm);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 var controller = function($scope, $http, $state) {
     $scope.firstName = "John";
     $scope.lastName = "Doe";
@@ -215,7 +240,7 @@ var controller = function($scope, $http, $state) {
 /* harmony default export */ __webpack_exports__["a"] = (controller);
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -273,7 +298,7 @@ function routes($stateProvider, $urlRouterProvider) {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 /**
@@ -4962,7 +4987,7 @@ angular.module('ui.router.state')
 })(window, window.angular);
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /**
@@ -38339,15 +38364,15 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(7);
+__webpack_require__(8);
 module.exports = angular;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 var g;
@@ -38374,7 +38399,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -38402,7 +38427,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -55491,10 +55516,10 @@ module.exports = function(module) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(10)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(11)(module)))
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(0);
