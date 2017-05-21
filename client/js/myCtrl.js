@@ -9,6 +9,10 @@ var controller = function($scope, $http, $state) {
         console.log(response.data);
         $scope.dab = response.data;
     }, function errorCallback(response) {
+        if(response.status === 404){
+            console.log('服务器没有连接');
+        }
+        
         // 请求失败执行代码
     });
 

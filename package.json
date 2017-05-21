@@ -5,7 +5,7 @@
     "scripts": {
         "start": "node server/bin/www",
         "start4": "nodemon nodetest",
-        "start1": "npm run start2 && npm run start1",
+        "start1": "npm run start3 && npm run start4",
         "start2": "webpack --config webpack.config.js",
         "start3": "webpack-dev-server"
     },

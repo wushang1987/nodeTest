@@ -163,7 +163,7 @@ var login = function($scope, $http,$state) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var regist = function ($scope, $http) {
+var regist = function ($scope, $http,$state) {
     $scope.registSubmit = function () {
         if ($scope.confirm !== $scope.password) {
             $("#modal-id").modal('show');
@@ -176,8 +176,10 @@ var regist = function ($scope, $http) {
             },
             url: '/user'
         }).then(function successCallback(response) {
-            // 请求成功执行代码
+            // 注册成功后跳转到登录界面
             console.log(response.data);
+            debugger;
+            $state.go('content')
             //$scope.dab = response.data;
         }, function errorCallback(response) {
             // 请求失败执行代码
@@ -55527,3 +55529,4 @@ module.exports = __webpack_require__(0);
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=bundle.js.map

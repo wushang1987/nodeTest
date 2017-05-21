@@ -1,5 +1,6 @@
 # nodejs 练习项目
 
+webpack 用起来问题太多，我把项目切成gulp的
 [![Build Status](https://travis-ci.org/wushang1987/nodeTest.svg?branch=master)](https://travis-ci.org/wushang1987/nodeTest)
 
 

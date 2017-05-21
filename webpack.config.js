@@ -20,7 +20,7 @@ module.exports = {
         path: path.resolve(__dirname + '\\client\\dist')
     },
     devServer: {
-        port: 9000,
+        port: 3000,
         publicPath: "/dist/",
         filename: "bundle.js",
         contentBase: path.join(__dirname, 'client'),
